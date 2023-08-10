@@ -1,30 +1,35 @@
-let num1= 5
-let num2 = 8
+let num1Input = document.getElementById("num1");
+let num2Input = document.getElementById("num2");
+let result = document.getElementById("result-el");
 
-document.getElementById("num1-el").textContent = num1
-document.getElementById("num2-el").textContent = num2
-let result = document.getElementById("result-el")
+function performOperation(operation) {
+    let num1 = parseFloat(num1Input.value);
+    let num2 = parseFloat(num2Input.value);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        result.textContent = "Please enter valid numbers.";
+        return;
+    }
 
-function add() {
-    let sum= num1+num2;
-   // console.log(result);
-   result.textContent = "result: " + sum;
-}
+    let calculatedResult;
+    
+    switch (operation) {
+        case 'add':
+            calculatedResult = num1 + num2;
+            break;
+        case 'subtract':
+            calculatedResult = num1 - num2;
+            break;
+        case 'divide':
+            calculatedResult = num1 / num2;
+            break;
+        case 'multiply':
+            calculatedResult = num1 * num2;
+            break;
+        default:
+            result.textContent = "Invalid operation.";
+            return;
+    }
 
-function subtract() {
-    let difference= num1-num2;
-   // console.log(result);
-   result.textContent = "result: " + difference;
-}
-
-function divide() {
-    let dividend= num1/num2;
-   // console.log(result);
-    result.textContent = "result: " + dividend;
-}
-
-function multiply() {
-    let multiplication= num1*num2;
-   // console.log(result);
-   result.textContent = "result: " + multiplication;
+    result.textContent = "Result: " + calculatedResult;
 }
