@@ -2,6 +2,8 @@
 
 Welcome to the Basic Calculator project, a simple web application that allows you to perform basic arithmetic operations on two numbers. This calculator was built using HTML, CSS, and JavaScript and provides a user-friendly interface for performing addition, subtraction, multiplication, and division.
 
+You can check it out on this link: [Calculator](https://charming-frangollo-fbcaf1.netlify.app/) 
+
 ## Usage
 
 1. Open the `index.html` file in your preferred web browser.
